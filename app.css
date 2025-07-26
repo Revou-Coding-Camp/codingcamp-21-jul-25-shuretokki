@@ -1,0 +1,7 @@
+/** @format */
+
+@import 'tailwindcss';
+@source "/*.{html,js}";
+@plugin "daisyui" {
+  themes: dark --prefersdark, black;
+}

@@ -1,0 +1,536 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOIRE</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-base-100 text-base-content min-h-screen font-sans">
+    <div id="app">
+      <div
+        id="alert-container"
+        class="fixed top-20 right-4 z-50 w-full max-w-xs space-y-2"
+      ></div>
+      <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col">
+          <header
+            class="w-full navbar bg-base-100/80 backdrop-blur-sm fixed top-0 z-50 shadow-lg"
+          >
+            <div class="flex w-full max-w-6xl mx-auto px-4">
+              <div class="flex-none lg:hidden">
+                <label
+                  for="my-drawer-3"
+                  aria-label="open sidebar"
+                  class="btn btn-square btn-ghost"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    class="inline-block w-6 h-6 stroke-current"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    ></path></svg
+                ></label>
+              </div>
+              <div
+                class="flex-1 px-2 mx-2 font-bold text-lg flex items-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-primary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  /></svg
+                >NOIRE
+              </div>
+              <nav class="flex-none hidden lg:block">
+                <ul class="menu menu-horizontal gap-2">
+                  <li>
+                    <a
+                      href="#home"
+                      class="nav-link active"
+                      data-page="home-page"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#tasks" class="nav-link" data-page="tasks-page"
+                      >Tasks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#stats" class="nav-link" data-page="stats-page"
+                      >Stats</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+
+          <main class="w-full">
+            <div id="home-page" class="page">
+              <video
+                class="fixed top-0 left-0 w-full h-full object-cover blur-sm saturate-50 brightness-[0.25]"
+                muted
+                autoplay
+                loop
+                playsinline
+                disablepictureinpicture
+                poster="/assets/section.png"
+              >
+                <source src="/assets/vid.webm" type="video/webm" />
+                <source src="/assets/vid.mp4" type="video/mp4" />
+              </video>
+
+              <section class="hero min-h-screen relative" id="hero-section">
+                <div class="absolute top-0 left-0 w-full h-full"></div>
+                <div
+                  class="hero-content text-center text-neutral-content reveal transition-transform duration-100 z-10"
+                  id="hero-content"
+                >
+                  <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-bold">
+                      Achieve Your
+                      <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+                        >Clarity</span
+                      >
+                    </h1>
+                    <p class="py-8 text-lg">
+                      An efficient way to manage your life.
+                    </p>
+                    <button
+                      class="btn btn-primary btn-lg get-started-btn transition-transform hover:scale-105 active:scale-95"
+                    >
+                      Get Started &rarr;
+                    </button>
+                  </div>
+                </div>
+
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+                  <svg
+                    class="w-8 h-8 text-white/70 animate-bounce"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </section>
+
+              <section class="py-24 bg-base-200/90 backdrop-blur-sm">
+                <div class="container mx-auto px-6 text-center">
+                  <div class="reveal">
+                    <h2 class="text-4xl font-bold mb-4">
+                      Designed for Simplicity, Built for Productivity.
+                    </h2>
+                    <p class="max-w-3xl mx-auto text-base-content/70 mb-16">
+                      Everything you need, and nothing you don't. Our core
+                      features are crafted to be powerful yet intuitive.
+                    </p>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                      class="card bg-base-100 shadow-xl reveal transition-all"
+                    >
+                      <div class="card-body items-center text-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-12 w-12 text-primary"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                          />
+                        </svg>
+                        <h2 class="card-title mt-4">Effortless Organization</h2>
+                        <p>
+                          Quickly add, edit, and prioritize tasks so you can
+                          focus on what matters.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-base-100 shadow-xl reveal transition-all"
+                      style="transition-delay: 200ms"
+                    >
+                      <div class="card-body items-center text-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-12 w-12 text-primary"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                          />
+                        </svg>
+                        <h2 class="card-title mt-4">Smart Views</h2>
+                        <p>
+                          Instantly filter by status, priority, or search to
+                          find exactly what you need.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-base-100 shadow-xl reveal transition-all"
+                      style="transition-delay: 400ms"
+                    >
+                      <div class="card-body items-center text-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-12 w-12 text-primary"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                          />
+                        </svg>
+                        <h2 class="card-title mt-4">Progress Insights</h2>
+                        <p>
+                          Visualize your accomplishments and stay motivated with
+                          a clean stats dashboard.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="py-24 bg-base-100 backdrop-blur-sm">
+                <div class="hero-content text-center reveal">
+                  <div class="max-w-2xl">
+                    <h2 class="text-4xl font-bold">Ready to Focus?</h2>
+                    <p class="py-8 text-lg text-base-content/80">
+                      Take the first step towards a more organized life. It's
+                      free, fast, and works seamlessly in your browser.
+                    </p>
+                    <button
+                      class="btn btn-primary btn-lg get-started-btn transition-transform hover:scale-105 active:scale-95"
+                    >
+                      Start Organizing Now
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div id="tasks-page" class="page hidden pt-16 mt-8">
+              <div class="max-w-4xl mx-auto">
+                <div
+                  class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 p-4"
+                >
+                  <div class="relative col-span-2 lg:col-span-2">
+                    <input
+                      type="text"
+                      id="search-input"
+                      placeholder="Search tasks..."
+                      class="input w-full pr-12"
+                    /><kbd
+                      class="kbd kbd-sm absolute right-2 top-1/2 -translate-y-1/2 hidden md:inline-flex"
+                      >Ctrl+K</kbd
+                    >
+                  </div>
+                  <div class="hidden md:block">
+                    <select id="filter-status" class="select w-full">
+                      <option disabled selected>Filter by Status</option>
+                      <option value="all">All Statuses</option>
+                      <option value="incomplete">Incomplete</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                  </div>
+                  <div class="hidden md:block">
+                    <select id="filter-priority" class="select w-full">
+                      <option disabled selected>Filter by Priority</option>
+                      <option value="all">All Priorities</option>
+                      <option value="high">High</option>
+                      <option value="medium">Medium</option>
+                      <option value="low">Low</option>
+                    </select>
+                  </div>
+                  <div class="block md:hidden col-span-2">
+                    <button
+                      class="btn btn-outline w-full"
+                      onclick="filter_modal.showModal()"
+                    >
+                      Filters
+                    </button>
+                  </div>
+                  <div
+                    class="flex items-center gap-2 col-span-2 md:col-span-2 lg:col-span-2"
+                  >
+                    <label class="font-semibold whitespace-nowrap"
+                      >Sort by:</label
+                    ><select id="sort-by" class="select flex-grow">
+                      <option value="dueDate">Due Date</option>
+                      <option value="priority">Priority</option></select
+                    ><button
+                      id="sort-order-toggle"
+                      class="btn btn-ghost btn-square"
+                      aria-label="Toggle sort order"
+                    ></button>
+                  </div>
+                  <div class="flex items-center gap-2 col-span-2 lg:col-span-2">
+                    <button
+                      class="btn btn-primary flex-grow"
+                      onclick="openTaskModal()"
+                    >
+                      Add New Task</button
+                    ><button
+                      class="btn btn-ghost btn-square"
+                      onclick="settings_modal.showModal()"
+                      aria-label="Open settings"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.39.44 1.022.12 1.45l-.527.737c-.25.35-.272.806-.108 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.11v1.093c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.108 1.204l.527.738c.32.427.27 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.204-.108-.397.165-.71.505-.78.93l-.15.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.149-.894c-.07-.424-.384-.764-.78-.93-.398-.164-.855-.142-1.205.108l-.737.527a1.125 1.125 0 0 1-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806-.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.11v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.806.272 1.204.108.397-.165.71-.505.78-.93l.15-.894Z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div id="task-list" class="space-y-4 mb-8"></div>
+              </div>
+            </div>
+            <div id="stats-page" class="page hidden pt-16 mt-8">
+              <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-center">Progress</h2>
+                <div
+                  id="stats-overview"
+                  class="stats stats-vertical lg:stats-horizontal shadow w-full mb-6"
+                ></div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                  <div class="lg:col-span-1 card bg-base-200 shadow-xl">
+                    <div
+                      id="stats-completion-rate"
+                      class="card-body items-center text-center"
+                    ></div>
+                  </div>
+                  <div class="lg:col-span-2 card bg-base-200 shadow-xl">
+                    <div class="card-body">
+                      <h2 class="card-title mb-4">Priority Breakdown</h2>
+                      <div id="stats-priority" class="space-y-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="drawer-side z-50">
+          <label
+            for="my-drawer-3"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul class="menu p-4 w-80 min-h-full bg-base-200">
+            <li class="font-bold text-lg p-4">Menu</li>
+            <li>
+              <a href="#home" class="nav-link-mobile" data-page="home-page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#tasks" class="nav-link-mobile" data-page="tasks-page"
+                >Tasks</a
+              >
+            </li>
+            <li>
+              <a href="#stats" class="nav-link-mobile" data-page="stats-page"
+                >Stats</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="task_modal" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 id="modal-title" class="font-bold text-lg">Add New Task</h3>
+        <form id="task-form" class="space-y-4 mt-4">
+          <input type="hidden" id="task-id" />
+          <fieldset class="fieldset">
+            <legend class="label">Title</legend>
+            <input
+              type="text"
+              id="task-title"
+              class="input w-full"
+              placeholder="e.g., Finish project report."
+              class="input"
+              required
+            />
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="label">Description</legend>
+            <textarea
+              id="task-description"
+              class="textarea h-24 w-full"
+              placeholder="Enter a detailed description of the product..."
+            ></textarea>
+            <div class="label">Optional</div>
+          </fieldset>
+          <div class="grid grid-cols-2 gap-4">
+            <fieldset class="fieldset">
+              <label class="label"
+                ><span class="label-text">Due Date</span></label
+              ><input type="date" id="task-due-date" class="input" required />
+            </fieldset>
+            <fieldset class="fieldset">
+              <label class="label"
+                ><span class="label-text">Priority</span></label
+              ><select id="task-priority" class="select" required>
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </fieldset>
+          </div>
+          <div class="modal-action">
+            <button type="submit" class="btn btn-primary">Save Task</button>
+          </div>
+        </form>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <dialog id="delete_confirm_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Confirm Deletion</h3>
+        <p class="py-4">
+          Are you sure you want to delete this task? This action cannot be
+          undone.
+        </p>
+        <div class="modal-action">
+          <button class="btn" onclick="delete_confirm_modal.close()">
+            Cancel</button
+          ><button id="confirm-delete-btn" class="btn btn-error">Delete</button>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <dialog id="settings_modal" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button
+            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          >
+            ✕
+          </button>
+        </form>
+        <h3 class="font-bold text-lg">Settings</h3>
+        <p class="py-4">Manage your application settings here.</p>
+        <div class="divider"></div>
+        <div class="flex justify-between items-center">
+          <span>Clear all tasks.</span
+          ><button id="clear-all-tasks-btn" class="btn btn-error">
+            Clear All
+          </button>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <dialog id="clear_all_confirm_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg text-error">Clear All Tasks?</h3>
+        <p class="py-4">
+          This will permanently delete all tasks. This action cannot be undone.
+        </p>
+        <div class="modal-action">
+          <button class="btn" onclick="clear_all_confirm_modal.close()">
+            Cancel</button
+          ><button id="confirm-clear-all-btn" class="btn btn-error">
+            Yes, Clear All
+          </button>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+    <dialog id="filter_modal" class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Filter Tasks</h3>
+        <div class="space-y-4 py-4">
+          <div class="form-control w-full">
+            <label class="label"
+              ><span class="label-text">Filter by Status</span></label
+            ><select id="mobile-filter-status" class="select">
+              <option value="all">All Statuses</option>
+              <option value="incomplete">Incomplete</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <div class="form-control w-full">
+            <label class="label"
+              ><span class="label-text">Filter by Priority</span></label
+            ><select id="mobile-filter-priority" class="select">
+              <option value="all">All Priorities</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop"><button>close</button></form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

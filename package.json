@@ -1,0 +1,25 @@
+{
+  "name": "noire",
+  "version": "1.0.0",
+  "description": "A minimalist to-do list application.",
+  "main": "script.js",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i app.css -o public/style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Revou-Coding-Camp/codingcamp-21-jul-25-shuretokki.git"
+  },
+  "author": "shuretokki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Revou-Coding-Camp/codingcamp-21-jul-25-shuretokki/issues"
+  },
+  "homepage": "https://github.com/Revou-Coding-Camp/codingcamp-21-jul-25-shuretokki#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "daisyui": "^5.0.47",
+    "tailwindcss": "^4.1.11"
+  }
+}
